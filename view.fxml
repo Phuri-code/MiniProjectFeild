@@ -24,7 +24,7 @@
       <Label layoutX="31.0" layoutY="99.0" text="Duration : 2mn00s " />
       <Button fx:id="button_submit" layoutX="273.0" layoutY="353.0" mnemonicParsing="false" onAction="#on_submit" text="Submit" />
       <Label layoutX="35.0" layoutY="121.0" text="Timer:" />
-      <Label fx:id="label_result" layoutX="405.0" layoutY="357.0" text="Result" />
+      <Label fx:id="label_result" layoutX="456.0" layoutY="357.0" text="Result" />
       <Label layoutX="69.0" layoutY="146.0" prefHeight="193.0" prefWidth="514.0" style="-fx-border-color: black;" text="public&#9;&#9;&#9;&#9; class Main( &#10;&#9; public static void main(&#9;&#9;&#9;&#9;[], args){&#10;&#9;&#9; &#9;&#9;&#9; .out.println(''Hello Word&quot;)&#10;&#9;}&#10;}">
          <font>
             <Font size="18.0" />
