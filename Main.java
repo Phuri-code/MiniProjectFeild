@@ -24,9 +24,11 @@ public class Main extends Application {
         // Create Scene
         Scene scene = new Scene(root, 300, 275);
 
+            // Get controller and start timer
         // Set Stage
         stage.setTitle("Hello World");
         stage.setScene(scene);
         stage.show();
     }
 }
+            

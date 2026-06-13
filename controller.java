@@ -1,3 +1,9 @@
+//timer
+import java.util.Timer;
+import java.util.TimerTask;
+// import java.util.Scanner;
+///import java.util.TimerTask;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -50,13 +56,34 @@ public class controller {
     void initialize(){
         choicebox_1.setValue("select");
         choicebox_1.getItems().addAll("class", "string", "system");
-        
+
         choicebox_2.setValue("select");
         choicebox_2.getItems().addAll("class", "string", "system");
-        
+
         choicebox_3.setValue("select");
         choicebox_3.getItems().addAll("class", "string", "system");
 
+        startTimer();
     }
 
+     public void startTimer() {
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            int seconds = 120;
+
+            @Override
+            public void run() {
+                if (seconds > 0) {
+                    int current = seconds/60;
+                    int current_sec = seconds%60;
+                    Platform.runLater(() -> label_clock.setText(current + "m" + current_sec + "s"));
+                    seconds--;
+                } else {
+                    Platform.runLater(() -> label_clock.setText("Time's up!"));
+                    timer.cancel();
+                }
+            }
+        }, 0, 1000);
+    }       
+    
 }
